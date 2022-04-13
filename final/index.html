@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chao Liu - About me</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+  <body class="index">
+    <img src="chao.jpg" alt="photo" id="selfie">
+    <div class="buttons">
+      <h2 class="name">Chao Liu</h2>
+      <h5 class="name">Software Engineer & Website Developer</h5>
+        <button id="Contact" type="button" class="btn btn-primary" onClick="document.getElementById('contact').scrollIntoView();">Contact Me</button>
+        <a href="Resume.pdf" download="resume">
+          <button id="Donwload" type="button" class="btn btn-secondary">Donwload</button>
+        </a>
+    </div>
+    <div class="inforgraphic">
+      <div class="card border-primary mb-3" id="inforgraphic-child">
+          <div class="card-header">About Me</div>
+          <div class="card-body">
+            <p class="card-text" id="inforgraphic-p">I am a computer programmer who graduated from Georgian College and still taking Computer programming Analysis at Seneca College. I have a passion for learning computer science and I would like to join your company as a great opportunity to demonstrate myself in working.
+              If you are interested in my resume, please click contact me for further connection with me.</p>
+          </div>
+        </div>
+        <div class="card border-secondary mb-3" id="inforgraphic-child">
+            <div class="card-header">Academic Honesty</div>
+            <div class="card-body">
+              <p class="card-text" id="inforgraphic-p">  I declare that my assessment is wholly my own work in accordance with Seneca Academic Policy. No part of this assessment has been copied manually or electronically from any other
+                source (including web sites) except for the information supplied by the WEB222 instructors and /
+                or made available in this assessment for my use. I also declare that no part of this assignment
+                has been distributed to other students.</p>
+                <p class="card-text" id="inforgraphic-p"><strong>Date:</strong> 2022/4/12</p>
+            </div>
+          </div>
+        <div class="card border-success mb-3" id="inforgraphic-child">
+          <div class="card-header">Basic information</div>
+          <div class="card-body">
+            <table class="table table-hover">
+              <tbody>
+                <tr class="table-active">
+                  <th id="information">Age:</th>
+                  <td>Chao Liu</td>
+                </tr>
+                <tr class="table-active" >
+                 <th id="information">Email:</th>
+                 <td>cliu155@myseneca.ca</td>
+                </tr>
+                <tr class="table-active" >
+                 <th  id="information">Language:</th>
+                 <td>Mandarin/English/French</td>
+                </tr>
+                <tr class="table-active" >
+                 <th id="information">Class section:</th>
+                 <td>ZCC</td>
+                </tr>
+                <tr class="table-active" >
+                 <th id="information">Student ID:</th>
+                 <td>160873170</td>
+                </tr>
+                <tr class="table-active" >
+                 <th id="information">instructor:</th>
+                 <td>Dr. Muath Alzghool</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+      </div>
+    </div>
+    <h3>Education</h3>
+    <div class="Education">
+      <div class="tab">
+        <button class="btn btn-light" onclick="education(event, 'HighSchool')" id="education-button">HighSchool</button>
+        <button class="btn btn-light" onclick="education(event, 'Georgian')" id="education-button">Georgian</button>
+        <button class="btn btn-light" onclick="education(event, 'Seneca')" id="education-button">Seneca</button>
+      </div>
+      <div class="cards-contain">
+        <div class="card text-white bg-info mb-3" id="HighSchool">
+          <div class="card-header">High School Education</div>
+          <div class="card-body">
+            <h4 class="card-title" id="inforgraphic-p">John F.Ross High School  Guelph(2015-2018)</h4>
+            <p class="card-text" id="inforgraphic-p">General High School education</p>
+          </div>
+        </div>
+        <div class="card text-white bg-info mb-3" id="Georgian">
+          <div class="card-header">College Diploma</div>
+          <div class="card-body">
+            <h4 class="card-title" id="inforgraphic-p">Georgian College <br/> Barrie Campus(2018-2021)</h4>
+            <p class="card-text" id="inforgraphic-p">Computer Programmer Program
+              <br/><a href="Georgian.pdf" download="resume">Georgian graduated letter</a>
+            </p>
+          </div>
+        </div>
+        <div class="card text-white bg-info mb-3" id="Seneca">
+          <div class="card-header">College Diploma</div>
+            <div class="card-body">
+              <h4 class="card-title" id="inforgraphic-p">Seneca College <br/> Toronto(2021-2024) expected</h4>
+              <p class="card-text" id="inforgraphic-p">Computer Programming Analysis</p>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <h3 id="contactme">Contact Me</h3>
+      <form action="https://httpbin.org/post" method="POST" name="contact" id="contact" onsubmit="return validateSubmit(this); ">
+        <div class="form-group">
+          <label for="name" class="form-label mt-4" id="form-label">Name:</label>
+          <input type="text" class="form-control" id="InputElement" placeholder="Enter your name" name="Name" required>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1" class="form-label mt-4" id="form-label">Email:</label>
+          <input type="email" class="form-control" id="InputElement" aria-describedby="emailHelp" placeholder="Enter email" required>
+        </div>
+        <div class="form-group">
+          <label for="address" class="form-label mt-4" id="form-label">Address:</label>
+          <input type="text" class="form-control" id="InputElement" placeholder="Enter your address" name="address" required>
+        </div>
+        <div class="form-group">
+          <label for="city" class="form-label mt-4" id="form-label">City:</label>
+          <input list="cities" class="form-control" id="InputElement" placeholder="Enter your City" name="city" required>
+          <datalist id = "cities">
+            <option value="Ottawa"></option>
+            <option value="Guelph"></option>
+            <option value="Victoria"></option>
+            <option value="Winnipeg"></option>
+            <option value="Halifax"></option>
+            <option value="Toronto"></option>
+            <option value="Calgary"></option>
+            <option value="Vancouver"></option>
+          </datalist>
+        </div>
+        <div class="form-group">
+          <label for="postalcode" class="form-label mt-4" id="form-label">Postal Code:</label>
+          <input type="text" class="form-control" id="InputElement" placeholder="Enter your Postal Code" name="postal" pattern="[A-Z][0-9][A-Z] [0-9][A-Z][0-9]" required>
+        </div>
+        <div class="form-group">
+          <label for="postalcode" class="form-label mt-4" id="form-label">Action: 
+            <input type="radio" class="form-check-input" name="action" id="question" value="Question" required>Question
+            <input type="radio" class="form-check-input" name="action" id="comment" value="Comment" required>Comment
+            <input type="radio" class="form-check-input" name="action" id="hiring" value="Hiring" required>Hiring</label>
+        </div>
+        <div class="form-group" id="Actions"></div>
+        <div class="form-check form-switch" id="switch">
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked="">
+          <label class="form-check-label" for="flexSwitchCheckChecked">Help me with better website develop? Donate $9999</label>
+        </div>
+        <input type="submit" value="Submit" class="btn btn-primary" id="submit">
+        <input type="reset" value="Reset" class="btn btn-primary" id="submit">
+      </form>
+    </div>
+    <script src="setting.js"></script>
+  </body>
+
+</html>
